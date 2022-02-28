@@ -50,6 +50,31 @@ div {
     margin: auto;
 }
 
+.icon {
+    height: 25px;
+    width: 25px;
+}
+
+#img-carpincho {
+    display: none;
+}
+
+#present-title {
+    display: none;
+}
+
+#present-subtitle {
+    display: none;
+}
+
+#present-disclaimer {
+    display : none;
+    padding-top: 20px;
+}
+
+#restart {
+    display: none
+}
 
 @media only screen and (max-width: 600px) {
     .img-main {
@@ -65,5 +90,13 @@ div {
 
     .title-poses{
         padding-top: 10px;
+    }
+
+    img {
+        width: 100%;
+    }
+    .w-50 {
+        width: 90% !important;
+        margin: 10em
     }
   }

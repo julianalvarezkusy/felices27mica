@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Tus 27
+    </title>
+    
+    <!-- add icon link -->
+    <link rel = "icon" href = 
+    "icons/299063_heart_icon.png" 
+            type = "image/x-icon">
+                            
+    
+    <!--Links-->
+    <!--Bootstrap styles-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!--Styles-->
+    <link href="css/style.css" rel="stylesheet" >
+</head>
+<body>
+    <h1 class="title-text" id="present-ready-title">Tu regalo estará listo en...</h1>
+    <h1 class="title-text" id="present-title">Un fin de semana todo incluido en Tigre</h1>
+    <h1 class="title-text" id="countdown">5</h1>
+    <h2 class="title-text" id="present-subtitle">Estancia Carpincho Amarillo</h2>
+    <div class="carousel-container" id="img-carpincho">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="sources/carpincho-amarillo.jpg" class="d-block w-50 " alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="sources/carpincho-amarillo-1.jpg" class="d-block w-50 " alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="sources/carpincho-amarillo-2.jpg" class="d-block w-50 " alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="sources/carpincho-amarillo-3.jpg" class="d-block w-50 " alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="sources/carpincho-amarillo-4.jpg" class="d-block w-50 " alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <h3 class="title-text" id="present-disclaimer">Fecha a confirmar jejeje</h3>
+
+    <div class="button-holder" id ="restart">
+        <span class="btn btn-light" id="test" onClick="transitionToPage('main.html')">
+            Reiniciar tour
+        </span>
+    </div>
+
+
+</body>
+    <script>
+        window.transitionToPage = function(href) {
+            document.querySelector("body").style.opacity = 0
+            setTimeout(function(){
+                window.location.href = href
+            }, 500)
+        }
+
+        number = 5
+        document.addEventListener('DOMContentLoaded', function(event) {
+            document.querySelector('body').style.opacity = 1
+            
+        
+       
+            setTimeout(function(){
+                document.getElementById('countdown').innerHTML = 5
+                setTimeout(function(){
+                    document.getElementById('countdown').innerHTML = 4
+                    setTimeout(function(){
+                    document.getElementById('countdown').innerHTML = 3
+                    setTimeout(function(){
+                    document.getElementById('countdown').innerHTML = 2
+                    setTimeout(function(){
+                    document.getElementById('countdown').innerHTML = 1
+                    setTimeout(function(){
+                        
+                        document.getElementById('countdown').style.display = 'none'
+                        unfade(document.getElementById('img-carpincho'))
+                        unfade(document.getElementById('present-title'))
+                        unfade(document.getElementById('present-subtitle'))
+                        unfade(document.getElementById('present-disclaimer'))
+                        unfade(document.getElementById('restart'))
+                        document.getElementById('present-ready-title').style.display = 'none'
+                        
+                    },1000)
+                    },1000)
+                    },1000)
+                    },1000)
+                    },1000)
+                    
+                    
+                    
+               
+            }, 1000)
+
+
+    function unfade(element) {
+    var op = 0.1;  // initial opacity
+    element.style.display = 'block';
+    var timer = setInterval(function () {
+        if (op >= 1){
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+        op += op * 0.1;
+    }, 100);
+}
+               
+
+           
+
+    
+
+        
+        
+        
+ 
+            
+        })
+
+        
+    </script>
+</html>
