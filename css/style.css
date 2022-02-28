@@ -1,0 +1,69 @@
+
+body {
+    background-color: pink ; 
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+h1{
+    padding-top: 50px;
+}
+
+
+.title-text {
+    text-align: center;
+}
+
+.title-poses {
+    padding-top: 50px;
+}
+
+.img-main{
+    width: 25%;
+    border: 5px solid black;
+    
+}
+
+.img-main-container {
+    margin: auto;
+    text-align: center;
+}
+
+div {
+    max-width: 100%;
+}
+
+.button-holder {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.carousel-container {
+    margin:auto;
+    padding-top: 20px;
+    text-align: center;
+    max-width: 75%;
+}
+
+.carousel img{
+    margin: auto;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .img-main {
+      width: 75%;
+    }
+    .carousel img{
+        width: 75%;
+    }
+
+    .carousel-container{
+        max-width: 100%;
+    }
+
+    .title-poses{
+        padding-top: 10px;
+    }
+  }
