@@ -73,7 +73,11 @@ div {
 }
 
 #restart {
-    display: none
+    display: none;
+}
+
+#present-love {
+    display: none;
 }
 
 @media only screen and (max-width: 600px) {
